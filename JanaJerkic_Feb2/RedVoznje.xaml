@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JanaJerkic_Feb2.RedVoznje"
+             BackgroundImageSource="podloga4.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Red vožnje" TextColor="#e01327" FontSize="40" Margin="40,50,0,0"/>
+            <Frame Margin="40,0" BackgroundColor="LightGray" CornerRadius="20">
+                <Label Text="Pretraga odredišta" TextColor="Gray" FontSize="Small"/>
+            </Frame>
+
+            <ListView ItemsSource="{Binding voznje}" ItemTapped="ListView_ItemTapped_1" Margin="20,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell TextColor="Black" DetailColor="#000">
+                            <ImageCell.ImageSource>
+                                <Binding Path="Fotografija"></Binding>
+                            </ImageCell.ImageSource>
+                            <ImageCell.Text>
+                                <Binding Path="Grad"></Binding>
+                            </ImageCell.Text>
+                            <ImageCell.Detail>
+                                <Binding Path="KratkiOpis" ></Binding>
+                            </ImageCell.Detail>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout BackgroundColor="#e01327" Margin="20" Padding="10">
+                <Label Text="Unesite broj putnika:" FontSize="Large" TextColor="#fff" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label Text="Odrasli:" TextColor="#fff" FontSize="Medium" Margin="0,0,20,0" VerticalOptions="Center"/>
+                    <Frame BackgroundColor="#fff" CornerRadius="10">
+                        <Entry x:Name="odrasli" WidthRequest="120" HeightRequest="20" TextColor="#000"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label Text="Djeca:" TextColor="#fff" FontSize="Medium" Margin="0,0,20,0" VerticalOptions="Center"/>
+                    <Frame BackgroundColor="#fff" CornerRadius="10">
+                        <Entry x:Name="djeca" WidthRequest="120" HeightRequest="20" TextColor="#000"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label Text="Penzioner:" TextColor="#fff" FontSize="Medium" Margin="0,0,20,0" VerticalOptions="Center"/>
+                    <Frame BackgroundColor="#fff" CornerRadius="10">
+                        <Entry x:Name="penzioneri" WidthRequest="120" HeightRequest="20" TextColor="#000"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

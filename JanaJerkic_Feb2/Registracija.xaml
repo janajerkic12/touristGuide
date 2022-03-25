@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JanaJerkic_Feb2.Registracija"
+             BackgroundImageSource="podloga2.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="0,70,0,0" BackgroundColor="#fff" HeightRequest="50" Padding="0,10">
+                <Label Text="Kreiranje profila" FontSize="Large" TextTransform="Uppercase" CharacterSpacing="1" TextColor="#000" HorizontalOptions="Center" Margin="0,10"/>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#fff" Margin="20,50" Padding="20">
+                <Entry Placeholder="Ime i Prezime" PlaceholderColor="#000" x:Name="ime" Margin="0,20" TextColor="#000"/>
+                <Entry Placeholder="Email" PlaceholderColor="#000" x:Name="email" Margin="0,20" TextColor="#000"/>
+                <Entry Placeholder="Šifra" PlaceholderColor="#000" x:Name="sifra" IsPassword="True" Margin="0,20" TextColor="#000"/>
+                <Entry Placeholder="Potvrdi šifru" PlaceholderColor="#000" x:Name="potvrdi" IsPassword="True" Margin="0,20" TextColor="#000"/>
+            </StackLayout>
+
+            <Button Text="Kreiranje profila" BackgroundColor="#0074c6" CornerRadius="20" Margin="80, -80, 80, 0" TextTransform="None" FontSize="Medium" Clicked="Button_Clicked"/>
+
+            <Image Source="logo_white_small.png" Margin="0,100,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

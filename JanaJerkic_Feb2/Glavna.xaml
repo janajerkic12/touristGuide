@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JanaJerkic_Feb2.Glavna"
+             BackgroundImageSource="podloga1.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#fff" VerticalOptions="Center" Margin="0,200,0,0">
+                    <StackLayout>
+                        <StackLayout Padding="0,40">
+                            <Image Source="logo.png" WidthRequest="450" HorizontalOptions="Center"/>
+                            <Label Text="Meet The World..." FontAttributes="Italic,Bold" TextColor="#000" HorizontalOptions="Center" FontSize="Large"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Button Text="Prijava" BackgroundColor="#e01327" CornerRadius="20" Margin="40, 100,40,20" TextTransform="None" FontSize="Medium" Clicked="Button_Clicked"/>
+                <Button Text="Kreiranje profila" BackgroundColor="#0074c6" CornerRadius="20" Margin="40, 0" TextTransform="None" FontSize="Medium" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
